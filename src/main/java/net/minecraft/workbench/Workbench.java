@@ -1,35 +1,44 @@
 package net.minecraft.workbench;
 
+import net.minecraft.workbench.server.Server;
+
 /**
- * The backbone of Minecraft's API. This static looking class links the implementation with the rest of the API,
- * allowing it to control the creation of objects itself.
+ * The backbone of Minecraft's API. This static looking class links the implementation with the rest of the API through
+ * {@link WorkbenchImpl}. Static shortcut methods are also provided to some common methods elsewhere.
  */
-public abstract class Workbench {
-    private static Workbench impl;
+public final class Workbench {
+    private static WorkbenchImpl impl;
 
     /**
-     * Gets the name of the implementation of Workbench.
+     * Gets the {@link WorkbenchImpl} behind the API.
      *
-     * @return Name of the implementation.
+     * @return WorkbenchImpl object provided by the API implementation.
      */
-    public abstract String getImplementationName();
+    public static WorkbenchImpl implementation() {
+        return impl;
+    }
 
     /**
-     * Gets the version of the implementation of Workbench.
+     * Utility method for retrieving the current {@link Server} object.
+     * <p />
+     * This is a shortcut for {@link net.minecraft.workbench.WorkbenchImpl#getServer()}.
      *
-     * @return Version of the implementation.
+     * @return WorkbenchImpl object provided by the API implementation.
+     * @see net.minecraft.workbench.WorkbenchImpl#getServer() Method being wrapped.
      */
-    public abstract String getImplementationVersion();
+    public static Server getServer() {
+        return impl.getServer();
+    }
 
     /**
-     * Allows the implementation to register its instance of this class.
+     * Allows the implementation to register its instance of {@link WorkbenchImpl}.
      * <p />
      * Should not be used by anything other than the implementation itself.
      *
-     * @param value New instance of this Workbench class
-     * @throws IllegalArgumentException Thrown if value is null
+     * @param value The specified WorkbenchImpl class to run as a singleton.
+     * @throws IllegalArgumentException Thrown if value is null.
      */
-    protected static void setInstance(Workbench value) {
+    public static void setInstance(WorkbenchImpl value) {
         if (value == null) throw new IllegalArgumentException("Instance cannot be null");
         impl = value;
     }
