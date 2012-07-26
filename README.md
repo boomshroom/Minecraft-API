@@ -10,6 +10,9 @@ We're currently using Maven to compile the API, and here's how you can too!
 ## Running
 By itself the API will do nothing. It must be implemented by a third party to work. Minecraft itself will be the official implementation of this API. At time of writing, there are no implementations to use yet (but also, there's not much really to implement).
 
+## Discussion
+The official IRC channels for the API are located on [irc.esper.net at #minecraftdev and #minecraftdev-discuss](http://webchat.esper.net/?nick=&channels=minecraftdev%2Cminecraftdev-discuss). You may also follow us on twitter for commit updates at [@MinecraftAPIBot](http://twitter.com/MinecraftAPIBot).
+
 ## Coding Standards
 * Javadocs are vital and must be used for every public facing method. They must note any possible raised exception, the return result (if any), the method arguments (if any) and a description of the method - this is a minimum, more is better.
 * All public facing methods must be input validated and raise exceptions if something is wrong. It's better to catch a bug that may happen than let it grow into something worse.
