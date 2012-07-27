@@ -73,7 +73,6 @@ public interface BanEntry {
      * Null is a valid expire date, which will mean this ban should never expire.
      *
      * @param expires Date that this entry should expire on, or null if never.
-     * @throws IllegalArgumentException Thrown if expires is null.
      */
     void setExpires(Date expires);
 
