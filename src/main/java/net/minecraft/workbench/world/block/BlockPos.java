@@ -307,11 +307,49 @@ public final class BlockPos implements Comparable<BlockPos> {
      *            The z coordinate.
      * @return The squared distance to the given coordinate.
      */
-    public float distSqr(int x, int y, int z) {
+    public double distSqr(int x, int y, int z) {
         int dx = this.x - x;
         int dy = this.y - y;
         int dz = this.z - z;
         return dx * dx + dy * dy + dz * dz;
+    }
+
+    /**
+     * Fetches the squared distance between this position and a given
+     * coordinate.
+     * 
+     * @param x
+     *            The x coordinate.
+     * @param y
+     *            The y coordinate.
+     * @param z
+     *            The z coordinate.
+     * @return The squared distance to the given coordinate.
+     */
+    public double distSqr(float x, float y, float z) {
+        float dx = (float) this.x - x;
+        float dy = (float) this.y - y;
+        float dz = (float) this.z - z;
+        return (double) (dx * dx + dy * dy + dz * dz);
+    }
+
+    /**
+     * Fetches the squared distance between this position and a given
+     * coordinate.
+     * 
+     * @param x
+     *            The x coordinate.
+     * @param y
+     *            The y coordinate.
+     * @param z
+     *            The z coordinate.
+     * @return The squared distance to the given coordinate.
+     */
+    public double distSqr(double x, double y, double z) {
+        double dx = (double) this.x - x;
+        double dy = (double) this.y - y;
+        double dz = (double) this.z - z;
+        return (dx * dx + dy * dy + dz * dz);
     }
 
     /**
