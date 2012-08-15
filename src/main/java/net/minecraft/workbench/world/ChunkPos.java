@@ -9,19 +9,48 @@ public final class ChunkPos implements Comparable<ChunkPos> {
     private final int x;
     private final int z;
 
+    /**
+     * Creates a chunk position located at (x, z)
+     * 
+     * @param x
+     *            Chunk x coordinate
+     * @param z
+     *            Chunk z coordinate
+     */
     public ChunkPos(int x, int z) {
         this.x = x;
         this.z = z;
     }
 
+    /**
+     * Fetches x coordinate.
+     * 
+     * @return The x coordinate.
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * Fetches z coordinate.
+     * 
+     * @return The z coordinate.
+     */
     public int getZ() {
         return z;
     }
 
+    /**
+     * Chunk position hash method. The method is used by the chunk position to
+     * create hash, but also for other callers to find a chunk in a hashmap from
+     * (x, z).
+     * 
+     * @param x
+     *            Chunk x coordinate
+     * @param z
+     *            Chunk z coordinate
+     * @return The hashvalue for (x, z)
+     */
     public static long hashCode(int x, int z) {
         return ((long) x & 0xffffffffL) | (((long) z & 0xffffffffL) << 32L);
     }
@@ -43,6 +72,17 @@ public final class ChunkPos implements Comparable<ChunkPos> {
         return false;
     }
 
+    /**
+     * Returns the block distance between the center position of the chunk to a
+     * given world position.
+     * 
+     * @param x
+     *            The world position x coordinate
+     * @param z
+     *            The world position z coordinate
+     * @return The squared distance from the center position of the chunk to the
+     *         given world coordinate.
+     */
     public double distanceToSqr(double x, double z) {
         double xPos = this.x * 16 + 8;
         double zPos = this.z * 16 + 8;
@@ -53,14 +93,31 @@ public final class ChunkPos implements Comparable<ChunkPos> {
         return xd * xd + zd * zd;
     }
 
+    /**
+     * Fetches the chunk's middle block x position.
+     * 
+     * @return The chunk's middle block x position.
+     */
     public int getMiddleBlockX() {
         return (x << 4) + 8;
     }
 
+    /**
+     * Fetches the chunk's middle block z position.
+     * 
+     * @return The chunk's middle block z position.
+     */
     public int getMiddleBlockZ() {
         return (z << 4) + 8;
     }
 
+    /**
+     * Fetches the chunk's middle block position at a given height coordinate.
+     * 
+     * @param y
+     *            The height coordinate.
+     * @return The chunk's middle block position.
+     */
     public BlockPos getMiddleBlockPosition(int y) {
         return new BlockPos(getMiddleBlockX(), y, getMiddleBlockZ());
     }
