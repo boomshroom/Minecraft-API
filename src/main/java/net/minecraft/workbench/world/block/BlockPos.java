@@ -8,14 +8,15 @@ import net.minecraft.workbench.world.*;
  */
 public final class BlockPos implements Comparable<BlockPos> {
 
-    private int x;
-    private int y;
-    private int z;
+    private final int x;
+    private final int y;
+    private final int z;
 
     /**
      * Creates a position at origin.
      */
     public BlockPos() {
+        this(0, 0, 0);
     }
 
     /**
