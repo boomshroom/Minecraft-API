@@ -35,18 +35,6 @@ public final class BlockPos implements Comparable<BlockPos> {
         this.z = z;
     }
 
-    /**
-     * Copies another position.
-     * 
-     * @param position
-     *            The position to be copied.
-     */
-    public BlockPos(BlockPos position) {
-        this.x = position.x;
-        this.y = position.y;
-        this.z = position.z;
-    }
-
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof BlockPos)) {
