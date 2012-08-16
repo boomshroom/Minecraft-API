@@ -1,12 +1,16 @@
 package net.minecraft.workbench.world.block;
 
+import java.io.*;
+
 import net.minecraft.workbench.world.*;
 
 /**
  * Immutable block position class. A block position is an integer (x, y, z)
  * coordinate in the world.
  */
-public final class BlockPos implements Comparable<BlockPos> {
+public final class BlockPos implements Comparable<BlockPos>, Serializable {
+
+    private static final long serialVersionUID = -8966009362001100977L;
 
     private final int x;
     private final int y;
@@ -31,6 +35,37 @@ public final class BlockPos implements Comparable<BlockPos> {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+    /**
+     * Constructor which creates a block position by reading coordinates from a
+     * {@link DataInputStream}.
+     * 
+     * @param in
+     *            An input stream.
+     * @throws IOException
+     *             On read errors, for instance the stream doesn't contain three
+     *             integers.
+     */
+    public BlockPos(DataInputStream in) throws IOException {
+        this.x = in.readInt();
+        this.y = in.readInt();
+        this.z = in.readInt();
+    }
+
+    /**
+     * Writes the block position to a {@link DataOutputStream}. This will add 12
+     * bytes to the stream.
+     * 
+     * @param out
+     *            An output stream.
+     * @throws IOException
+     *             If a write error occurs.
+     */
+    public void write(DataOutputStream out) throws IOException {
+        out.writeInt(x);
+        out.writeInt(y);
+        out.writeInt(z);
     }
 
     @Override
@@ -349,4 +384,10 @@ public final class BlockPos implements Comparable<BlockPos> {
     public double distSqr(BlockPos pos) {
         return distSqr(pos.x, pos.y, pos.z);
     }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ", " + z + ")";
+    }
+
 }
