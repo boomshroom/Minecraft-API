@@ -13,11 +13,9 @@ public final class BlockPos implements Comparable<BlockPos> {
     private final int z;
 
     /**
-     * Creates a position at origin.
+     * A position at origin.
      */
-    public BlockPos() {
-        this(0, 0, 0);
-    }
+    public static final BlockPos ORIGIN = new BlockPos(0, 0, 0);
 
     /**
      * Creates a position at (x, y, z)
