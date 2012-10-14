@@ -1,5 +1,8 @@
 package net.minecraft.workbench.server;
 
+import net.minecraft.workbench.server.command.Argument;
+import net.minecraft.workbench.server.command.Command;
+import net.minecraft.workbench.server.command.CommandSource;
 import net.minecraft.workbench.server.players.BanList;
 
 /**
@@ -24,4 +27,15 @@ public interface Server {
      * @throws IllegalArgumentException Thrown if banlist is null.
      */
     void setBanList(BanList banlist);
+    
+    //Command Methods
+    void registerCommand(Command command);
+    
+    void sendCommand(Command command, CommandSource source, Object...args);
+    
+    Command getCommand(String title, Argument...args);
+    
+    void unregisterCommand(Command command);
+    
+    Command[] getCommands();
 }
