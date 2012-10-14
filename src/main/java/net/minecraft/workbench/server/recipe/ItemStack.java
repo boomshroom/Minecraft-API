@@ -8,7 +8,5 @@ public interface ItemStack {
 	public int getAmount();
 	
 	public short getData();
-	
-	short 
 
 }
