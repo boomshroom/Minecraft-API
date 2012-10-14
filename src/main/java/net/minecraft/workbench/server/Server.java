@@ -1,6 +1,7 @@
 package net.minecraft.workbench.server;
 
 import net.minecraft.workbench.server.players.BanList;
+import net.minecraft.workbench.server.recipe.Recipe;
 
 /**
  * Classes that implement this interface are responsible for controlling various server related methods.
@@ -24,4 +25,12 @@ public interface Server {
      * @throws IllegalArgumentException Thrown if banlist is null.
      */
     void setBanList(BanList banlist);
+    
+    // Added recipe methods
+    
+    void addRecipe(Recipe recipe);
+    
+    void removeRecipe(Recipe recipe);
+    
+    Recipe getRecipe(Object ... objects);
 }
