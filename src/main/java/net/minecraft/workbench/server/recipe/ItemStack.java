@@ -6,5 +6,9 @@ public interface ItemStack {
 	public short getId();
 
 	public int getAmount();
+	
+	public short getData();
+	
+	short 
 
 }
