@@ -2,7 +2,7 @@ package net.minecraft.workbench.server.recipe;
 
 public interface RecipeStyle {
 	
-	public void getName();
+	public String getName();
 	
 	public void processRecipe(Recipe recipe);
 	
