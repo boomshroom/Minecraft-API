@@ -1,10 +1,10 @@
 package net.minecraft.workbench.server;
 
+import net.minecraft.workbench.inventory.recipe.Recipe;
 import net.minecraft.workbench.server.command.Argument;
 import net.minecraft.workbench.server.command.Command;
 import net.minecraft.workbench.server.command.CommandSource;
 import net.minecraft.workbench.server.players.BanList;
-import net.minecraft.workbench.server.recipe.Recipe;
 
 /**
  * Classes that implement this interface are responsible for controlling various server related methods.
@@ -42,7 +42,7 @@ public interface Server {
     
     void sendCommand(Command command, CommandSource source, Object...args);
     
-    Command getCommand(String title, Argument...args);
+    Command getCommand(String title, Argument<?>...args);
     
     void unregisterCommand(Command command);
     

@@ -1,4 +1,6 @@
-package net.minecraft.workbench.server.recipe;
+package net.minecraft.workbench.inventory.recipe;
+
+import net.minecraft.workbench.inventory.ItemStack;
 
 public interface RecipeStyle {
 	
