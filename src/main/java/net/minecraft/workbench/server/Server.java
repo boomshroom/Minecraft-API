@@ -1,6 +1,5 @@
 package net.minecraft.workbench.server;
 
-import net.minecraft.workbench.inventory.recipe.Recipe;
 import net.minecraft.workbench.server.command.Argument;
 import net.minecraft.workbench.server.command.Command;
 import net.minecraft.workbench.server.command.CommandSource;
@@ -28,14 +27,6 @@ public interface Server {
      * @throws IllegalArgumentException Thrown if banlist is null.
      */
     void setBanList(BanList banlist);
-    
-    // Added recipe methods
-    
-    void addRecipe(Recipe recipe);
-    
-    void removeRecipe(Recipe recipe);
-    
-    Recipe getRecipe(Object ... objects);
 
     //Command Methods
     void registerCommand(Command command);

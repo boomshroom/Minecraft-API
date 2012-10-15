@@ -1,5 +1,6 @@
 package net.minecraft.workbench;
 
+import net.minecraft.workbench.inventory.recipe.Recipe;
 import net.minecraft.workbench.server.Server;
 
 /**
@@ -26,4 +27,12 @@ public abstract class WorkbenchImpl {
      * @return Server object.
      */
     public abstract Server getServer();
+    
+    // Added recipe methods
+    
+    public abstract void addRecipe(Recipe recipe);
+    
+    public abstract void removeRecipe(Recipe recipe);
+    
+    public abstract Recipe getRecipe(Object ... objects);
 }
