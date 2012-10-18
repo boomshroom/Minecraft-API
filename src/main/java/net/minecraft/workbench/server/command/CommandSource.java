@@ -1,11 +1,9 @@
 package net.minecraft.workbench.server.command;
 
-public interface CommandSource {
+import net.minecraft.workbench.server.permission.PermissionHolder;
+
+public interface CommandSource extends PermissionHolder{
 	
 	void sendCommand(Command command);
-	
-	Permission getPermLevel();
-	
-	void setPermLevel(Permission permission);
 
 }

@@ -1,5 +1,7 @@
 package net.minecraft.workbench;
 
+import net.minecraft.workbench.event.Event;
+import net.minecraft.workbench.event.EventHandler;
 import net.minecraft.workbench.inventory.recipe.Recipe;
 import net.minecraft.workbench.server.Server;
 
@@ -35,4 +37,10 @@ public abstract class WorkbenchImpl {
     public abstract void removeRecipe(Recipe recipe);
     
     public abstract Recipe getRecipe(Object ... objects);
+    
+    // Added Event Methods
+    
+    public abstract void callEvent(Event event);
+    
+    public abstract void registerEventHandler(EventHandler handler);
 }

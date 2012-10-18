@@ -1,5 +1,6 @@
 package net.minecraft.workbench.server.players;
 
+import net.minecraft.workbench.server.command.CommandSource;
 import net.minecraft.workbench.server.entities.EntityController;
 
 import java.util.UUID;
@@ -14,7 +15,7 @@ import java.util.UUID;
  * The entity that player controls does not need to be alive nor does it need to be humanoid. They cannot explicitly
  * control more than one entity at a time, and entities may not be controlled by more than one player.
  */
-public interface Player extends EntityController {
+public interface Player extends EntityController, CommandSource {
     /**
      * Gets the {@link UUID} for this Player.
      * <p />
@@ -47,4 +48,6 @@ public interface Player extends EntityController {
      * @return The player's current username.
      */
     String getDisplayName();
+    
+    
 }
