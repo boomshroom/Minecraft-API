@@ -26,8 +26,8 @@ public final class Workbench {
      * @return WorkbenchImpl object provided by the API implementation.
      * @see net.minecraft.workbench.WorkbenchImpl#getServer() Method being wrapped.
      */
-    public static Server getServer() {
-        return impl.getServer();
+    public static Engine getEngine() {
+        return impl.getEngine();
     }
 
     /**
