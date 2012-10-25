@@ -25,10 +25,11 @@ public abstract class WorkbenchImpl {
 
     /**
      * Gets the {@link Server} currently being ran.
+     * Changed to {@link Engine} to support added {@link Client}
      *
      * @return Server object.
      */
-    public abstract Server getServer();
+    public abstract Engine getEngine();
     
     // Added recipe methods
     
@@ -43,4 +44,5 @@ public abstract class WorkbenchImpl {
     public abstract void callEvent(Event event);
     
     public abstract void registerEventHandler(EventHandler handler);
+    
 }
