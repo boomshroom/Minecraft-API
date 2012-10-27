@@ -105,4 +105,10 @@ public interface BanEntry {
      * @throws IllegalArgumentException Thrown if reason is null.
      */
     void setReason(String reason);
+    
+    //added type methods
+    
+    short getType();
+    
+    short setType();
 }
