@@ -2,7 +2,7 @@ package net.minecraft.workbench.inventory;
 
 public interface ItemStack {
 	
-	public short getId();
+	public String getId();
 
 	public int getAmount();
 	

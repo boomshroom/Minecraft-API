@@ -33,11 +33,7 @@ public abstract class WorkbenchImpl {
     
     // Added recipe methods
     
-    public abstract void addRecipe(Recipe recipe);
-    
-    public abstract void removeRecipe(Recipe recipe);
-    
-    public abstract Recipe getRecipe(Object ... objects);
+    public abstract Recipe getRecipeType(String name);
     
     // Added Event Methods
     
