@@ -3,6 +3,7 @@ package net.minecraft.workbench;
 import net.minecraft.workbench.event.Event;
 import net.minecraft.workbench.event.EventHandler;
 import net.minecraft.workbench.inventory.recipe.Recipe;
+import net.minecraft.workbench.inventory.recipe.RecipeStyle;
 import net.minecraft.workbench.server.Server;
 
 /**
@@ -25,15 +26,14 @@ public abstract class WorkbenchImpl {
 
     /**
      * Gets the {@link Server} currently being ran.
-     * Changed to {@link Engine} to support added {@link Client}
      *
      * @return Server object.
      */
-    public abstract Engine getEngine();
+    public abstract Server getServer();
     
     // Added recipe methods
     
-    public abstract Recipe getRecipeType(String name);
+    public abstract RecipeStyle getRecipeType(String name);
     
     // Added Event Methods
     

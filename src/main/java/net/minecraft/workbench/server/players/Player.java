@@ -1,5 +1,6 @@
 package net.minecraft.workbench.server.players;
 
+import net.minecraft.workbench.client.Client;
 import net.minecraft.workbench.server.command.CommandSource;
 import net.minecraft.workbench.server.entities.EntityController;
 
@@ -48,6 +49,14 @@ public interface Player extends EntityController, CommandSource {
      * @return The player's current username.
      */
     String getDisplayName();
+    
+    /**
+     * Gets the {@link Client} controlling this player
+     * 
+     * @return the controlling client
+     *
+     */
+    Client getClient();
     
     
 }
