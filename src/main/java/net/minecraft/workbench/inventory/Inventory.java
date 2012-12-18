@@ -1,6 +1,8 @@
 package net.minecraft.workbench.inventory;
 
-public interface Inventory {
+import net.minecraft.workbench.data.Savable;
+
+public interface Inventory extends Savable{
 	
 	ItemStack getItemAt(int slot);
 	

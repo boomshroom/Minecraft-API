@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.workbench.Workbench;
+import net.minecraft.workbench.data.DataTag;
 import net.minecraft.workbench.inventory.ItemStack;
 import net.minecraft.workbench.inventory.recipe.RecipeStyle;
 import net.minecraft.workbench.inventory.recipe.RecipeUser;
@@ -45,6 +46,24 @@ public class WorkbenchEntity implements TileEntity, RecipeUser {
 	@Override
 	public int[] getProductSlots() {
 		return new int[] {45};
+	}
+
+	@Override
+	public DataTag<?> getData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setData(DataTag<?> data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

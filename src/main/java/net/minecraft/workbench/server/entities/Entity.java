@@ -1,6 +1,7 @@
 package net.minecraft.workbench.server.entities;
 
 import net.minecraft.workbench.client.render.EntityRender;
+import net.minecraft.workbench.data.Savable;
 import net.minecraft.workbench.server.source.DammageSource;
 
 /**
@@ -8,7 +9,7 @@ import net.minecraft.workbench.server.source.DammageSource;
  * <p />
  * Entities may be controlled by an {@link EntityController} and
  */
-public interface Entity {
+public interface Entity extends Savable{
     /**
      * Gets the {@link EntityController} responsible for this entity currently.
      * <p />
