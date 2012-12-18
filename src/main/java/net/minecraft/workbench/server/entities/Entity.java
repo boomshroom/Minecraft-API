@@ -1,5 +1,7 @@
 package net.minecraft.workbench.server.entities;
 
+import net.minecraft.workbench.client.render.EntityRender;
+
 /**
  * An Entity is an object that may be located within a world on the {@link net.minecraft.workbench.server.Server}.
  * <p />
@@ -17,4 +19,6 @@ public interface Entity {
      * @return Controller responsible for this entity.
      */
     EntityController getController();
+    
+    EntityRender getRender();
 }

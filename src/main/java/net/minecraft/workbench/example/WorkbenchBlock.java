@@ -1,6 +1,7 @@
 package net.minecraft.workbench.example;
 
 import net.minecraft.workbench.block.Block;
+import net.minecraft.workbench.client.render.BlockRender;
 import net.minecraft.workbench.client.render.model.Model;
 import net.minecraft.workbench.inventory.ItemStack;
 import net.minecraft.workbench.server.entities.tile.TileEntity;
@@ -9,12 +10,6 @@ public class WorkbenchBlock implements Block {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Model getModel() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -49,6 +44,12 @@ public class WorkbenchBlock implements Block {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public BlockRender getRender() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
