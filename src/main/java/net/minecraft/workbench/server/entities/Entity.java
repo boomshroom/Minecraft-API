@@ -1,6 +1,7 @@
 package net.minecraft.workbench.server.entities;
 
 import net.minecraft.workbench.client.render.EntityRender;
+import net.minecraft.workbench.server.source.DammageSource;
 
 /**
  * An Entity is an object that may be located within a world on the {@link net.minecraft.workbench.server.Server}.
@@ -21,4 +22,16 @@ public interface Entity {
     EntityController getController();
     
     EntityRender getRender();
+    
+    int getHealth();
+    
+    int getMaxHealth();
+    
+    void dammage(DammageSource source);
+    
+    void setHealth(int health);
+    
+    void setMaxHealth(int health);
+    
+    void getExperiance();
 }
