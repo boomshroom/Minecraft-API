@@ -1,10 +1,9 @@
 package net.minecraft.workbench.block;
 
 import net.minecraft.workbench.client.render.BlockRender;
-import net.minecraft.workbench.client.render.model.Model;
 import net.minecraft.workbench.data.Savable;
-import net.minecraft.workbench.inventory.ItemStack;
 import net.minecraft.workbench.server.entities.tile.TileEntity;
+import net.minecraft.workbench.server.inventory.ItemStack;
 
 public interface Block extends Savable{
 	

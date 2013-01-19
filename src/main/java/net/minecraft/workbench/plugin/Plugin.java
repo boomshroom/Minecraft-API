@@ -2,6 +2,8 @@ package net.minecraft.workbench.plugin;
 
 public interface Plugin {
 	
-	public void loadPlugin();
+	void loadPlugin();
+	
+	String getName();
 
 }

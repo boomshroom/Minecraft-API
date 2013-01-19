@@ -1,11 +1,15 @@
 package net.minecraft.workbench.data;
 
-public interface DataTag<T> {
+public interface DataTag<V> {
 	
 	void save();
 	
-	T getData();
+	V getValue();
 	
-	void setData(T data);
+	void setvalue(V value);
+	
+	void setKey(String key);
+	
+	String getKey();
 
 }

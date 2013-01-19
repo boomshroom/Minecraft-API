@@ -1,8 +1,8 @@
-package net.minecraft.workbench.inventory.recipe;
+package net.minecraft.workbench.server.inventory.recipe;
 
 import java.util.List;
 
-import net.minecraft.workbench.inventory.Inventory;
+import net.minecraft.workbench.server.inventory.Inventory;
 
 public interface RecipeUser extends Inventory{
 	

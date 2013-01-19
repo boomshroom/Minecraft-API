@@ -6,13 +6,13 @@ public interface Command {
 	
 	Argument<?>[] getArguments();
 	
-	public void setTitle(String title);
+	void setTitle(String title);
 	
-	public void setArguments(Argument<?> ... args);
+	void setArguments(Argument<?> ... args);
 	
-	public void onProcessed(Object ... args);
+	void process(CommandSource source,Object ... args);
 	
-	void onProcessed(String ... args);
+	void process(CommandSource source,String ... args);
 	
 	String getHelp();
 

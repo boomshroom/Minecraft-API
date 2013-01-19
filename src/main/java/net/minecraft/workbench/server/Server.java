@@ -1,8 +1,9 @@
 package net.minecraft.workbench.server;
 
-import net.minecraft.workbench.Engine;
+import net.minecraft.workbench.server.inventory.recipe.RecipeManager;
 import net.minecraft.workbench.server.command.Argument;
 import net.minecraft.workbench.server.command.Command;
+import net.minecraft.workbench.server.command.CommandManager;
 import net.minecraft.workbench.server.command.CommandSource;
 import net.minecraft.workbench.server.players.BanList;
 
@@ -11,7 +12,7 @@ import net.minecraft.workbench.server.players.BanList;
  * These can range from altering server properties (port number), world configurations (adding a new dimension), or
  * accessing the player list.
  */
-public interface Server extends Engine{
+public interface Server{
     /**
      * Gets the {@link BanList} currently responsible for controlling which players may not join the server.
      * <p />
@@ -30,14 +31,8 @@ public interface Server extends Engine{
     void setBanList(BanList banlist);
 
     //Command Methods
-    void registerCommand(Command command);
+    CommandManager getCommandManager();
     
-    void sendCommand(Command command, CommandSource source, Object...args);
-    
-    Command getCommand(String title, Argument<?>...args);
-    
-    void unregisterCommand(Command command);
-    
-    Command[] getCommands();
+    RecipeManager getRecipeManager();
     
 }

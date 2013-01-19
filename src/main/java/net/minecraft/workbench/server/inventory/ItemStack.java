@@ -1,4 +1,4 @@
-package net.minecraft.workbench.inventory;
+package net.minecraft.workbench.server.inventory;
 
 public interface ItemStack {
 	
