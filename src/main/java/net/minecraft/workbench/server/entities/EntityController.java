@@ -3,7 +3,7 @@ package net.minecraft.workbench.server.entities;
 /**
  * An Entity Controller is something that is responsible for controling how {@link Entity}s work.
  * <p />
- * Some examples of entity controllers are {@link net.minecraft.workbench.server.players.Player}s or some AI controllers.
+ * Some examples of entity controllers are {@link net.minecraft.workbench.server.entities.players.Player}s or some AI controllers.
  */
 public interface EntityController {
     /**

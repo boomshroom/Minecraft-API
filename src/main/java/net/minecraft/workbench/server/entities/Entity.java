@@ -13,7 +13,7 @@ public interface Entity extends Savable{
     /**
      * Gets the {@link EntityController} responsible for this entity currently.
      * <p />
-     * This will not be null. Examples of valid entity controllers are {@link net.minecraft.workbench.server.players.Player}s
+     * This will not be null. Examples of valid entity controllers are {@link net.minecraft.workbench.server.entities.players.Player}s
      * or custom classes implenting the {@link EntityController} interface for (as an example) AI purposes.
      * <p />
      * It is a given that the controller returned by this object will return this entity via {@link net.minecraft.workbench.server.entities.EntityController#getControlledEntity()}.
@@ -35,4 +35,9 @@ public interface Entity extends Savable{
     void setMaxHealth(int health);
     
     void getExperiance();
+    
+    int[] getTile();
+    void setTile(int x,int y,int z);
+    float[] getPos();
+    void setPos(float x,float y,float z);
 }

@@ -1,4 +1,4 @@
-package net.minecraft.workbench.server.command;
+package net.minecraft.workbench.server.chat.command;
 
 public interface CommandManager {
 	

@@ -4,12 +4,12 @@ import net.minecraft.workbench.basic.server.command.BasicCommandManager;
 import net.minecraft.workbench.basic.server.inventory.recipe.BasicRecipeManager;
 import net.minecraft.workbench.basic.server.players.BasicBanList;
 import net.minecraft.workbench.server.Server;
-import net.minecraft.workbench.server.command.Argument;
-import net.minecraft.workbench.server.command.Command;
-import net.minecraft.workbench.server.command.CommandManager;
-import net.minecraft.workbench.server.command.CommandSource;
+import net.minecraft.workbench.server.chat.command.Argument;
+import net.minecraft.workbench.server.chat.command.Command;
+import net.minecraft.workbench.server.chat.command.CommandManager;
+import net.minecraft.workbench.server.chat.command.CommandSource;
+import net.minecraft.workbench.server.entities.players.BanList;
 import net.minecraft.workbench.server.inventory.recipe.RecipeManager;
-import net.minecraft.workbench.server.players.BanList;
 
 public class BasicServer implements Server {
 

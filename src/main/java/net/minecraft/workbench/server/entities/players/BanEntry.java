@@ -1,4 +1,4 @@
-package net.minecraft.workbench.server.players;
+package net.minecraft.workbench.server.entities.players;
 
 import java.util.Date;
 

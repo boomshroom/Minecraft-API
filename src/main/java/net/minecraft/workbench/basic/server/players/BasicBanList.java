@@ -2,8 +2,8 @@ package net.minecraft.workbench.basic.server.players;
 
 import java.util.Map;
 
-import net.minecraft.workbench.server.players.BanEntry;
-import net.minecraft.workbench.server.players.BanList;
+import net.minecraft.workbench.server.entities.players.BanEntry;
+import net.minecraft.workbench.server.entities.players.BanList;
 
 public class BasicBanList implements BanList {
 

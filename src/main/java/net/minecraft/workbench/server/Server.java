@@ -1,11 +1,11 @@
 package net.minecraft.workbench.server;
 
 import net.minecraft.workbench.server.inventory.recipe.RecipeManager;
-import net.minecraft.workbench.server.command.Argument;
-import net.minecraft.workbench.server.command.Command;
-import net.minecraft.workbench.server.command.CommandManager;
-import net.minecraft.workbench.server.command.CommandSource;
-import net.minecraft.workbench.server.players.BanList;
+import net.minecraft.workbench.server.chat.command.Argument;
+import net.minecraft.workbench.server.chat.command.Command;
+import net.minecraft.workbench.server.chat.command.CommandManager;
+import net.minecraft.workbench.server.chat.command.CommandSource;
+import net.minecraft.workbench.server.entities.players.BanList;
 
 /**
  * Classes that implement this interface are responsible for controlling various server related methods.

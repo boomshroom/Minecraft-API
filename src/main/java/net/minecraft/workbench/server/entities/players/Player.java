@@ -1,7 +1,7 @@
-package net.minecraft.workbench.server.players;
+package net.minecraft.workbench.server.entities.players;
 
 import net.minecraft.workbench.client.Client;
-import net.minecraft.workbench.server.command.CommandSource;
+import net.minecraft.workbench.server.chat.command.CommandSource;
 import net.minecraft.workbench.server.entities.EntityController;
 
 import java.util.UUID;
@@ -56,7 +56,6 @@ public interface Player extends EntityController, CommandSource {
      * @return the controlling client
      *
      */
-    Client getClient();
-    
+    Client getClient();    
     
 }

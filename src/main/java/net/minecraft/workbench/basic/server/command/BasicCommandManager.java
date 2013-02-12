@@ -2,10 +2,10 @@ package net.minecraft.workbench.basic.server.command;
 
 import java.util.ArrayList;
 
-import net.minecraft.workbench.server.command.Argument;
-import net.minecraft.workbench.server.command.Command;
-import net.minecraft.workbench.server.command.CommandManager;
-import net.minecraft.workbench.server.command.CommandSource;
+import net.minecraft.workbench.server.chat.command.Argument;
+import net.minecraft.workbench.server.chat.command.Command;
+import net.minecraft.workbench.server.chat.command.CommandManager;
+import net.minecraft.workbench.server.chat.command.CommandSource;
 
 public class BasicCommandManager implements CommandManager {
 
