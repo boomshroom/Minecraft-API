@@ -113,47 +113,16 @@ public final class Direction {
      * @return The new facing relative to the current direction.
      */
     public static int getRelativeFacing(int direction, int facing) {
-        if (facing == Facing.UP || facing == Facing.DOWN) {
+        if (direction==UNDEFINED){
+        	return Facing.UNDEFINED;
+        }else if (facing == Facing.UP || facing == Facing.DOWN || facing == Facing.UNDEFINED) {
+        
             // directions share the same up and down facings
             return facing;
         }
-        if (direction == NORTH) {
-            // north direction is the default direction
-            return facing;
+        else{
+        	return (direction+facing-2)&Direction.MASK+2;
         }
-        if (direction == SOUTH) {
-            // south is flipped
-            return Facing.getOpposite(facing);
-        }
-        if (direction == WEST) {
-            if (facing == Facing.NORTH) {
-                return Facing.EAST;
-            }
-            if (facing == Facing.SOUTH) {
-                return Facing.WEST;
-            }
-            if (facing == Facing.WEST) {
-                return Facing.NORTH;
-            }
-            if (facing == Facing.EAST) {
-                return Facing.SOUTH;
-            }
-        }
-        if (direction == EAST) {
-            if (facing == Facing.NORTH) {
-                return Facing.WEST;
-            }
-            if (facing == Facing.SOUTH) {
-                return Facing.EAST;
-            }
-            if (facing == Facing.WEST) {
-                return Facing.SOUTH;
-            }
-            if (facing == Facing.EAST) {
-                return Facing.NORTH;
-            }
-        }
-        return Facing.UNDEFINED;
     }
 
     /**

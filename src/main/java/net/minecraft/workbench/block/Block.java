@@ -17,6 +17,6 @@ public interface Block extends Savable{
 	
 	void onRightClick(ItemStack item);
 	
-	TileEntity getEntity();
+	TileEntity createEntity();
 	
 }

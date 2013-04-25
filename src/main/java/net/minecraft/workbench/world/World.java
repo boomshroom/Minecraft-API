@@ -1,5 +1,7 @@
 package net.minecraft.workbench.world;
 
+import java.util.UUID;
+
 import net.minecraft.workbench.block.Block;
 import net.minecraft.workbench.data.Config;
 import net.minecraft.workbench.data.DataTag;
@@ -18,4 +20,6 @@ public interface World {
 	int getHeight(int x,int z);
 	void setting(String key,boolean value); //?//
 	
+	String getName();
+	UUID getUID();
 }
