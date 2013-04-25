@@ -84,13 +84,11 @@ public final class BlockPos implements Comparable<BlockPos>, Serializable {
     }
 
     public int compareTo(BlockPos pos) {
-        if (y == pos.y) {
-            if (z == pos.z) {
-                return x - pos.x;
-            }
-            return z - pos.z;
-        }
-        return y - pos.y;
+    	int xdiff = x-pos.x;
+    	int ydiff = y-pos.y;
+    	int zdiff = z-pos.z;
+    	double xydiff=Math.sqrt(xdiff*xdiff+ydiff*ydiff);
+    	return (int) Math.sqrt(xydiff*xydiff+zdiff*zdiff);
     }
 
     /**
